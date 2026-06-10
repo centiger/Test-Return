@@ -7,109 +7,61 @@
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#236B63">
 <style>
-*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4fbf8;color:#10201d}body{min-height:100vh}.app{max-width:880px;margin:0 auto;padding:14px 12px 28px}.top{background:linear-gradient(135deg,#164f49,#236B63);color:#fff;border-radius:20px;padding:16px 16px 14px;box-shadow:0 8px 24px rgba(20,80,70,.18)}.topbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.backBtn,.pill,.listBtn{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:8px 10px;font-size:12px;font-weight:900;text-decoration:none}.listBtn{cursor:pointer}.pill{margin-left:auto;color:#d8fff8}.kicker{font-size:12px;font-weight:900;color:#bff7ee;margin-bottom:6px}.top h1{margin:0;font-size:26px;line-height:1.12}.top p{margin:8px 0 0;color:#e6fff9;font-size:14px;line-height:1.5}.tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 0 4px}.tab{flex:0 0 auto;border:1px solid #9fc7c0;background:#fff;color:#123a35;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;text-decoration:none}.tab.active{background:#236B63;color:#fff;border-color:#236B63}.card{background:#fff;border:1px solid #a9d2ca;border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 4px 14px rgba(20,80,70,.08)}.sectionTitle{font-size:15px;font-weight:900;color:#123a35;border-left:6px solid #236B63;padding-left:8px;margin:0 0 12px}.summaryGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mini{border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:11px}.mini b{display:block;font-size:12px;color:#236B63;margin-bottom:4px}.mini span{display:block;font-size:13px;font-weight:900;line-height:1.35;color:#152f2b}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.node{min-height:86px;border:1px solid #b6d9d2;background:#fbfffd;border-radius:16px;padding:10px 8px;text-align:center;position:relative}.node:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:34px;color:#236B63;font-weight:900}.ico{font-size:24px}.node b{display:block;font-size:12px;color:#123a35;margin-top:3px}.node small{display:block;font-size:10.5px;color:#49645f;margin-top:4px;line-height:1.35}.mapWrap{border:1px solid #c7e2dc;border-radius:18px;overflow:hidden;background:#e9f6f3}.mapWrap img{display:block;width:100%;height:auto;background:#e9f6f3}.caption{padding:10px 12px;font-size:12px;line-height:1.5;color:#385550;background:#fbfffd}.infoGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.info{border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:11px}.info b{font-size:13px;color:#123a35}.info p{font-size:12px;line-height:1.45;margin:5px 0 0;color:#4d665f}.timeline{display:flex;gap:8px;overflow-x:auto;padding:2px 0}.t{flex:0 0 118px;border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:10px;text-align:center}.t strong{display:block;color:#236B63;font-size:13px}.t span{display:block;margin-top:5px;font-size:11.5px;line-height:1.35;font-weight:800}.t.active{background:linear-gradient(135deg,#236B63,#164f49);color:#fff;border-color:#57BFB6}.t.active strong,.t.active span{color:#fff}.note{background:linear-gradient(135deg,#effffb,#dff5ef);border:1px solid #9fc7c0;border-radius:16px;padding:13px;font-size:13px;line-height:1.6;font-weight:700;color:#16332f}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.action{display:block;text-align:center;text-decoration:none;border-radius:13px;padding:12px;font-size:13px;font-weight:900}.primary{background:#236B63;color:#fff}.secondary{background:#fff;border:1px solid #9fc7c0;color:#123a35}.placeholder{padding:24px 14px;text-align:center}.placeholder h2{margin:0 0 8px;font-size:22px;color:#123a35}.placeholder p{margin:0;color:#4d665f;line-height:1.55}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.42);display:none;align-items:center;justify-content:center;z-index:1000;padding:18px}.drawer.show{display:flex}.drawerCard{width:min(430px,100%);background:#fbfffd;border:1px solid #9fc7c0;border-radius:18px;padding:15px;box-shadow:0 10px 30px rgba(0,0,0,.24)}.drawerHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.drawerHead b{font-size:18px;color:#123a35}.drawerClose{border:0;background:#236B63;color:white;border-radius:10px;padding:8px 10px;font-weight:900}.hubList{display:grid;gap:8px}.hubItem{display:block;text-decoration:none;border:1px solid #c7e2dc;background:#fff;border-radius:14px;padding:12px;color:#123a35}.hubItem b{display:block;font-size:14px}.hubItem span{display:block;margin-top:4px;font-size:12px;color:#536e68;line-height:1.35}.hubItem.active{background:linear-gradient(135deg,#236B63,#164f49);color:#fff;border-color:#57BFB6}.hubItem.active span{color:#e6fff9}@media(max-width:560px){.summaryGrid,.infoGrid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.node:nth-child(2)::after{display:none}.top h1{font-size:24px}.pill{margin-left:0}.actions{grid-template-columns:1fr}}
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4fbf8;color:#10201d}body{min-height:100vh}.app{max-width:880px;margin:0 auto;padding:14px 12px 96px}.top{background:linear-gradient(135deg,#164f49,#236B63);color:#fff;border-radius:20px;padding:16px 16px 14px;box-shadow:0 8px 24px rgba(20,80,70,.18)}.topbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}.backBtn,.pill,.listBtn{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.1);color:#fff;border-radius:999px;padding:8px 10px;font-size:12px;font-weight:900;text-decoration:none}.listBtn{cursor:pointer}.pill{margin-left:auto;color:#d8fff8}.kicker{font-size:12px;font-weight:900;color:#bff7ee;margin-bottom:6px}.top h1{margin:0;font-size:26px;line-height:1.12}.top p{margin:8px 0 0;color:#e6fff9;font-size:14px;line-height:1.5}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.tags span{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#e6fff9;border-radius:999px;padding:5px 8px;font-size:11px;font-weight:900}.tabs{display:flex;gap:7px;overflow-x:auto;padding:12px 0 4px}.tab{flex:0 0 auto;border:1px solid #9fc7c0;background:#fff;color:#123a35;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;text-decoration:none}.tab.active{background:#236B63;color:#fff;border-color:#236B63}.card{background:#fff;border:1px solid #a9d2ca;border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 4px 14px rgba(20,80,70,.08)}.sectionTitle{font-size:15px;font-weight:900;color:#123a35;border-left:6px solid #236B63;padding-left:8px;margin:0 0 12px}.summaryGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mini{border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:11px}.mini b{display:block;font-size:12px;color:#236B63;margin-bottom:4px}.mini span{display:block;font-size:13px;font-weight:900;line-height:1.35;color:#152f2b}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.node{min-height:86px;border:1px solid #b6d9d2;background:#fbfffd;border-radius:16px;padding:10px 8px;text-align:center;position:relative}.node:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:34px;color:#236B63;font-weight:900}.ico{font-size:24px}.node b{display:block;font-size:12px;color:#123a35;margin-top:3px}.node small{display:block;font-size:10.5px;color:#49645f;margin-top:4px;line-height:1.35}.mapWrap{border:1px solid #c7e2dc;border-radius:18px;overflow:hidden;background:#e9f6f3}.mapWrap img{display:block;width:100%;height:auto;background:#e9f6f3}.caption{padding:10px 12px;font-size:12px;line-height:1.5;color:#385550;background:#fbfffd}.infoGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.info{border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:11px}.info b{font-size:13px;color:#123a35}.info p{font-size:12px;line-height:1.45;margin:5px 0 0;color:#4d665f}.timeline{display:flex;gap:8px;overflow-x:auto;padding:2px 0}.t{flex:0 0 118px;border:1px solid #c7e2dc;background:#fbfffd;border-radius:14px;padding:10px;text-align:center}.t strong{display:block;color:#236B63;font-size:13px}.t span{display:block;margin-top:5px;font-size:11.5px;line-height:1.35;font-weight:800}.t.active{background:linear-gradient(135deg,#236B63,#164f49);color:#fff;border-color:#57BFB6}.t.active strong,.t.active span{color:#fff}.note{background:linear-gradient(135deg,#effffb,#dff5ef);border:1px solid #9fc7c0;border-radius:16px;padding:13px;font-size:13px;line-height:1.6;font-weight:700;color:#16332f}.verseCard{display:grid;gap:9px}.verse{background:#fbfffd;border:1px solid #c7e2dc;border-radius:15px;padding:12px}.verse b{display:block;color:#236B63;font-size:13px;margin-bottom:6px}.verse p{margin:0;font-size:13px;line-height:1.65;font-weight:750;color:#18332f}.listFlow{display:grid;gap:8px}.listFlow .step{background:#fbfffd;border:1px solid #c7e2dc;border-radius:14px;padding:11px;font-size:13px;font-weight:850;color:#16332f;line-height:1.45}.peopleGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.person{background:#fbfffd;border:1px solid #c7e2dc;border-radius:14px;padding:11px}.person .role{display:inline-block;background:#e2f5ef;color:#236B63;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:950;margin-bottom:6px}.person b{display:block;font-size:14px;color:#123a35}.person p{font-size:12px;color:#4d665f;line-height:1.45;margin:5px 0 0}.messageBox{background:linear-gradient(135deg,#123a35,#236B63);color:#fff;border-radius:18px;padding:17px;border:1px solid #57BFB6;box-shadow:0 8px 22px rgba(20,80,70,.2)}.messageBox b{display:block;color:#bff7ee;margin-bottom:8px}.messageBox p{margin:0;font-size:15px;line-height:1.65;font-weight:900}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.action{display:block;text-align:center;text-decoration:none;border-radius:13px;padding:12px;font-size:13px;font-weight:900}.primary{background:#236B63;color:#fff}.secondary{background:#fff;border:1px solid #9fc7c0;color:#123a35}.drawer{position:fixed;inset:0;background:rgba(0,0,0,.42);display:none;align-items:center;justify-content:center;z-index:1000;padding:18px}.drawer.show{display:flex}.drawerCard{width:min(430px,100%);background:#fbfffd;border:1px solid #9fc7c0;border-radius:18px;padding:15px;box-shadow:0 10px 30px rgba(0,0,0,.24)}.drawerHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.drawerHead b{font-size:18px;color:#123a35}.drawerClose{border:0;background:#236B63;color:white;border-radius:10px;padding:8px 10px;font-weight:900}.hubList{display:grid;gap:8px}.hubItem{display:block;text-decoration:none;border:1px solid #c7e2dc;background:#fff;border-radius:14px;padding:12px;color:#123a35}.hubItem b{display:block;font-size:14px}.hubItem span{display:block;margin-top:4px;font-size:12px;color:#536e68;line-height:1.35}.hubItem.active{background:linear-gradient(135deg,#236B63,#164f49);color:#fff;border-color:#57BFB6}.hubItem.active span{color:#e6fff9}.bottom{position:fixed;left:0;right:0;bottom:0;background:#effaf6;border-top:1px solid #9fc7c0;display:flex;gap:8px;padding:9px 10px;z-index:60}.bottom a,.bottom button{flex:1;text-align:center;text-decoration:none;border:1px solid #9fc7c0;background:#fff;border-radius:13px;padding:10px 4px;font-size:11px;font-weight:950;color:#123a35}.bottom .main{background:#236B63;color:#fff;border-color:#236B63}@media(max-width:560px){.summaryGrid,.infoGrid,.peopleGrid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.node:nth-child(2)::after,.node:nth-child(4)::after{display:none}.top h1{font-size:24px}.pill{margin-left:0}.actions{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="app">
   <section class="top">
     <div class="topbar"><a class="backBtn" href="../index.html">← Matrix</a><button class="listBtn" id="hubListBtn" type="button">허브 목록</button><span class="pill">포로귀환 시대 · 회복의 과정</span></div>
-    <div class="kicker" id="kicker">허브 01 · 귀환 허브</div>
-    <h1 id="title">귀환 허브</h1>
-    <p id="subtitle">고레스 칙령을 통해 포로귀환 시대가 열리고, 언약 백성의 회복이 시작됩니다.</p>
+    <div class="kicker" id="kicker"></div>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+    <div class="tags" id="tags"></div>
   </section>
   <nav class="tabs" id="tabs"></nav>
   <main id="content"></main>
 </div>
+<nav class="bottom"><a id="prevBottom" href="#">이전</a><button class="main" id="hubBottom" type="button">허브목록</button><a id="nextBottom" href="#">다음</a></nav>
 <div class="drawer" id="drawer"><div class="drawerCard"><div class="drawerHead"><b>포로귀환 허브 목록</b><button class="drawerClose" id="drawerClose">닫기</button></div><div class="hubList" id="hubList"></div></div></div>
 <script>
-const HUBS={
-  return:{
-    order:'허브 01 · 귀환 허브', title:'귀환 허브', label:'귀환',
-    subtitle:'고레스 칙령을 통해 포로귀환 시대가 열리고, 언약 백성의 회복이 시작됩니다.',
-    short:'고레스 칙령 · 1차 귀환', next:'temple',
-    summary:[['대표사건','고레스 칙령과 1차 귀환'],['연대','BC 538~536'],['대표인물','고레스 · 스룹바벨 · 예수아'],['관련성경','에스라 1~3장, 대하 36장']],
-    flow:[['📜','고레스 칙령','귀환과 성전 재건 허락'],['🚶','1차 귀환','스룹바벨 인도'],['🏙️','예루살렘 도착','무너진 터전으로 돌아옴'],['🧱','성전 기초','예배 회복의 출발']],
-    map:'assets/maps/return-hub-map.png',
-    mapTitle:'귀환 허브 지도',
-    mapCaption:'바사 제국의 수산·바벨론 권역에서 예루살렘으로 이어지는 귀환의 길을 중심으로, 고레스 칙령 이후 스룹바벨과 예수아가 이끄는 1차 귀환 공동체가 무너진 성전 터로 돌아와 예배 회복의 첫걸음을 내딛는 흐름을 시각화합니다.',
-    info:[['회복의 주도권','귀환은 유다 백성의 힘이 아니라 하나님의 섭리와 약속 성취로 시작됩니다.'],['이방 왕 고레스','하나님은 바사 왕 고레스를 사용하여 포로귀환의 문을 여십니다.'],['스룹바벨 공동체','1차 귀환 공동체는 성전 재건과 예배 회복의 기초를 놓습니다.'],['CEN 연결','Check: 무슨 일이 일어났는가 · Explore: 왜 이방 왕을 사용하셨는가 · Note: 회복은 하나님의 약속에서 시작된다.']],
-    timeline:[['BC 586','예루살렘 멸망'],['BC 538','고레스 칙령',true],['BC 536','1차 귀환'],['BC 536경','성전 기초'],['BC 520','성전 재건 재개']],
-    note:'귀환 허브의 핵심은 “돌아왔다”가 아니라 “하나님이 회복을 시작하셨다”입니다. 포로귀환 시대 전체의 첫 문장입니다.'
-  },
-  temple:{
-    order:'허브 02 · 성전 허브',title:'성전 허브',label:'성전',
-    subtitle:'멈춰 있던 성전 재건이 하나님의 말씀으로 다시 시작되고, 제2성전 완공으로 예배 회복의 중심이 세워집니다.',
-    short:'성전 기초 · 학개·스가랴 · 제2성전', prev:'return', next:'esther',
-    summary:[['대표사건','제2성전 재건과 완공'],['연대','BC 536~516'],['대표인물','스룹바벨 · 예수아 · 학개 · 스가랴 · 다리오'],['관련성경','에스라 3~6장, 학개, 스가랴']],
-    flow:[['🧱','성전 기초','귀환 직후 예배 회복 시작'],['⛔','공사 중단','주변 민족의 방해와 낙심'],['📣','선지자 권면','학개와 스가랴의 말씀'],['🏛️','제2성전 완공','예배 중심의 재건']],
-    map:'assets/maps/temple-hub-map.png',
-    mapTitle:'성전 허브 지도',
-    mapCaption:'예루살렘 성전 터를 중심으로, 귀환 공동체가 성전 기초를 놓은 뒤 주변 민족의 방해로 공사가 중단되고, 학개와 스가랴의 말씀 선포를 통해 재건이 재개되어 다리오 왕 시대에 제2성전이 완공되는 흐름을 시각화합니다.',
-    info:[['멈춘 회복','귀환했지만 성전 재건은 방해와 낙심 속에 오래 멈췄습니다.'],['말씀의 재점화','학개와 스가랴는 백성의 우선순위를 다시 예배와 성전으로 돌립니다.'],['제2성전 완공','성전 완공은 건물 완성이 아니라 예배 중심 회복의 표시입니다.'],['CEN 연결','Check: 왜 공사가 멈췄는가 · Explore: 말씀은 어떻게 공동체를 다시 일으키는가 · Note: 회복은 예배의 중심을 세우는 일이다.']],
-    timeline:[['BC 536','성전 기초'],['BC 536~520','공사 중단'],['BC 520','학개·스가랴',true],['BC 520~516','재건 재개'],['BC 516','제2성전 완공']],
-    note:'성전 허브의 핵심은 “돌아온 백성이 다시 하나님을 예배하는 중심을 세웠다”는 점입니다. 회복은 장소 복귀로 끝나지 않고 예배 회복으로 깊어집니다.'
-  },
-  esther:{
-    order:'허브 03 · 보존 허브',title:'보존 허브',label:'보존',
-    subtitle:'에스더 사건을 통해 흩어진 유대 민족이 하나님의 섭리 안에서 보존되는 흐름을 탐험합니다.',
-    short:'에스더 · 모르드개 · 부림절', prev:'temple', next:'ezra',
-    summary:[['대표사건','에스더와 유대 민족 보존'],['연대','BC 478경'],['대표인물','에스더 · 모르드개 · 하만 · 아하수에로'],['관련성경','에스더 1~10장']],
-    flow:[['👑','에스더 왕후','와스디 폐위 후 왕후 등극'],['⚔️','하만의 음모','유대인 말살 조서'],['🙏','에스더의 결단','죽으면 죽으리이다'],['🎉','부림절 제정','구원의 날을 기억']],
-    map:'assets/maps/preservation-hub-map.png',
-    mapTitle:'보존 허브 지도',
-    mapCaption:'바사 제국 수도 수산궁을 중심으로, 왕후 와스디 폐위 이후 에스더가 왕후가 되고 하만이 유대인 말살 계획을 세운다. 모르드개의 요청을 받은 에스더가 죽음을 각오하고 왕 앞에 나아가며, 결국 하만이 처형되고 유대 민족이 구원을 받는 과정과 부림절 제정까지의 흐름을 시각화합니다.',
-    info:[['숨은 섭리','에스더서에는 하나님의 이름이 직접 나오지 않지만, 모든 사건은 섭리 안에서 움직입니다.'],['민족 보존','성전이 세워져도 백성이 사라지면 언약의 흐름은 끊어집니다. 보존은 회복의 필수 조건입니다.'],['에스더의 결단','개인의 안전보다 공동체의 생명을 선택한 믿음의 결단이 위기를 뒤집습니다.'],['CEN 연결','Check: 어떤 위기가 있었는가 · Explore: 하나님은 어떻게 보이지 않게 일하시는가 · Note: 회복은 보존을 통해 이어진다.']],
-    timeline:[['BC 486','아하수에로 즉위'],['BC 478경','에스더 왕후',true],['BC 474경','하만의 조서'],['BC 473경','유대인 구원'],['이후','부림절 제정']],
-    note:'보존 허브의 핵심은 “하나님은 이름이 드러나지 않아도 언약 백성을 보존하신다”는 점입니다.'
-  },
-  ezra:{
-    order:'허브 04 · 율법 허브',title:'율법 허브',label:'율법',
-    subtitle:'성전이 세워진 뒤, 에스라를 통해 포로귀환 공동체가 말씀 중심 공동체로 다시 세워지는 흐름을 탐험합니다.',
-    short:'에스라 · 율법 낭독 · 언약 갱신', prev:'esther', next:'nehemiah',
-    summary:[['대표사건','에스라의 율법 회복과 신앙개혁'],['연대','BC 458 이후'],['대표인물','에스라 · 아닥사스다 · 귀환 공동체'],['관련성경','에스라 7~10장, 느헤미야 8장']],
-    flow:[['📜','에스라 귀환','율법 교사로 예루살렘에 도착'],['🗣️','율법 낭독','말씀을 읽고 뜻을 해석'],['💧','백성의 회개','말씀 앞에서 공동체가 돌이킴'],['🤝','언약 갱신','말씀 중심 공동체 회복']],
-    map:'assets/maps/law-hub-map.png',
-    mapTitle:'율법 허브 지도',
-    mapCaption:'바사 제국에서 예루살렘으로 돌아온 에스라를 중심으로, 포로귀환 공동체가 성전 회복 이후 율법 낭독과 해석을 통해 말씀 중심 공동체로 재정비되는 흐름을 시각화합니다. 예루살렘 성전과 광장을 중심으로 에스라의 귀환, 율법책 낭독, 백성의 회개, 언약 갱신, 공동체 질서 회복이 단계적으로 보이도록 구성합니다.',
-    info:[['성전 이후의 회복','성전이 세워졌지만 공동체의 내면과 삶은 말씀으로 다시 정비되어야 했습니다.'],['율법 교사 에스라','에스라는 말씀을 연구하고 준행하며 가르치는 인물로 공동체 회복을 이끕니다.'],['말씀의 해석','율법 낭독은 단순 독서가 아니라 백성이 이해하도록 풀어주는 말씀 회복입니다.'],['CEN 연결','Check: 에스라는 무엇을 회복했는가 · Explore: 왜 성전 다음에 말씀이 필요한가 · Note: 공동체는 말씀으로 다시 세워진다.']],
-    timeline:[['BC 516','제2성전 완공'],['BC 478경','에스더 사건'],['BC 458','에스라 귀환',true],['BC 458 이후','신앙개혁'],['BC 445','율법 낭독과 언약 갱신']],
-    note:'율법 허브의 핵심은 “건물이 세워진 뒤, 사람과 공동체가 말씀으로 다시 세워졌다”는 점입니다.'
-  },
-  nehemiah:{
-    order:'허브 05 · 성벽 허브',title:'성벽 허브',label:'성벽',
-    subtitle:'느헤미야의 성벽 재건을 통해 예루살렘 공동체의 외적 질서와 신앙 공동체성이 회복되는 흐름을 탐험합니다.',
-    short:'느헤미야 · 성벽 재건 · 공동체 회복', prev:'ezra', nextUrl:'https://centiger.github.io/CEN-Matrix-Jesus/', nextLabel:'✝️ 예수시대 Matrix로 이동 →',
-    summary:[['대표사건','느헤미야의 성벽 재건과 공동체 정비'],['연대','BC 445~430경'],['대표인물','느헤미야 · 아닥사스다 · 산발랏 · 도비야'],['관련성경','느헤미야 1~13장']],
-    flow:[['🙏','느헤미야의 기도','성벽 붕괴 소식을 듣고 금식하며 기도'],['📜','왕의 허락','아닥사스다의 허락으로 예루살렘 귀환'],['🌙','성벽 조사','밤에 무너진 성벽을 살핌'],['🧱','52일 재건','방해 속에서도 성벽 완공']],
-    map:'assets/maps/wall-hub-map.png',
-    mapTitle:'성벽 허브 지도',
-    mapCaption:'수산궁에서 느헤미야가 예루살렘 성벽 붕괴 소식을 듣고 기도하는 장면으로 시작합니다. 아닥사스다 왕의 허락을 받아 예루살렘으로 돌아온 느헤미야가 밤에 성벽을 조사하고, 백성과 함께 재건에 나섭니다. 산발랏과 도비야의 방해 속에서도 각 구간을 분담하여 공사를 진행하고, 마침내 52일 만에 성벽을 완공합니다. 이후 공동체가 모여 감사와 봉헌 예배를 드리고 질서를 재정비하는 과정까지 한눈에 보이도록 구성합니다.',
-    info:[['무너진 성벽','성벽 붕괴는 단순한 시설 문제가 아니라 공동체의 수치와 불안정한 현실을 보여줍니다.'],['기도와 실행','느헤미야는 먼저 기도하고, 그 다음 현실적인 계획과 실행으로 공동체를 이끕니다.'],['방해 속의 재건','산발랏과 도비야의 조롱과 위협에도 백성은 한 손에는 도구, 한 손에는 무기를 들고 재건을 이어갑니다.'],['CEN 연결','Check: 무엇이 무너졌는가 · Explore: 공동체는 어떻게 다시 세워지는가 · Note: 회복은 예배와 말씀을 넘어 삶의 질서까지 세우는 일이다.']],
-    timeline:[['BC 445','성벽 소식'],['BC 445','느헤미야 귀환',true],['52일','성벽 완공'],['BC 445 이후','봉헌과 공동체 정비'],['BC 430경','개혁 지속']],
-    note:'성벽 허브의 핵심은 “무너진 성벽이 다시 세워질 때, 공동체도 함께 세워졌다”는 점입니다. 포로귀환 시대 회복의 마지막 단계입니다.'
-  }
-};
-const params=new URLSearchParams(location.search);let slug=params.get('hub')||'return';if(!HUBS[slug])slug='return';
+let HUBS=[];let slug=new URLSearchParams(location.search).get('hub');
+const $=id=>document.getElementById(id);
 function esc(s){return String(s??'')}
-function renderTabs(){document.getElementById('tabs').innerHTML=Object.entries(HUBS).map(([k,h])=>`<a class="tab ${k===slug?'active':''}" href="?hub=${k}">${h.label}</a>`).join('')}
-function renderHeader(h){document.getElementById('kicker').textContent=h.order;document.getElementById('title').textContent=h.title;document.getElementById('subtitle').textContent=h.subtitle}
-function hubName(key){return HUBS[key]?.title || '허브'}
-function prevLabel(h){return h.prevLabel || `← 이전 허브: ${hubName(h.prev)}`}
-function nextLabel(h){return h.nextLabel || `다음 허브: ${hubName(h.next)} →`}
-function renderHub(h){return `<section class="card"><h2 class="sectionTitle">핵심 요약</h2><div class="summaryGrid">${h.summary.map(x=>`<div class="mini"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></section>
-<section class="card"><h2 class="sectionTitle">${h.label} 흐름</h2><div class="flow">${h.flow.map(x=>`<div class="node"><div class="ico">${x[0]}</div><b>${x[1]}</b><small>${x[2]}</small></div>`).join('')}</div></section>
-<section class="card"><h2 class="sectionTitle">${h.mapTitle}</h2><div class="mapWrap"><img src="${h.map}" alt="${h.mapTitle}"><div class="caption">${h.mapCaption}</div></div></section>
-<section class="card"><h2 class="sectionTitle">핵심 의미</h2><div class="infoGrid">${h.info.map(x=>`<div class="info"><b>${x[0]}</b><p>${x[1]}</p></div>`).join('')}</div></section>
-<section class="card"><h2 class="sectionTitle">연대 흐름</h2><div class="timeline">${h.timeline.map(x=>`<div class="t ${x[2]?'active':''}"><strong>${x[0]}</strong><span>${x[1]}</span></div>`).join('')}</div></section>
-<div class="note">${h.note}</div>
-<div class="actions">${h.prev?`<a class="action secondary" href="?hub=${h.prev}">${prevLabel(h)}</a>`:`<a class="action secondary" href="../index.html">← Matrix로 돌아가기</a>`}${h.next?`<a class="action primary" href="?hub=${h.next}">${nextLabel(h)}</a>`:(h.nextUrl?`<a class="action primary" href="${h.nextUrl}">${h.nextLabel||'다음 Matrix로 이동 →'}</a>`:`<a class="action primary" href="../index.html">Matrix로 돌아가기</a>`)}</div>`}
-function renderPlaceholder(h){return `<section class="card placeholder"><h2>${h.title}</h2><p>${h.subtitle}</p><p style="margin-top:10px;font-weight:900;color:#236B63">아직 상세 허브 제작 전입니다.</p></section><div class="actions">${h.prev?`<a class="action secondary" href="?hub=${h.prev}">${prevLabel(h)}</a>`:`<a class="action secondary" href="../index.html">← Matrix로 돌아가기</a>`}${h.next?`<a class="action primary" href="?hub=${h.next}">${nextLabel(h)}</a>`:(h.nextUrl?`<a class="action primary" href="${h.nextUrl}">${h.nextLabel||'다음 Matrix로 이동 →'}</a>`:`<a class="action primary" href="../index.html">Matrix로 돌아가기</a>`)}</div>`}
-function renderHubList(){document.getElementById('hubList').innerHTML=Object.entries(HUBS).map(([k,h])=>`<a class="hubItem ${k===slug?'active':''}" href="?hub=${k}"><b>${h.order.replace(' · ',' ')}</b><span>${h.short} · ${h.subtitle}</span></a>`).join('')}
-function render(){const h=HUBS[slug];renderTabs();renderHeader(h);renderHubList();document.getElementById('content').innerHTML=h.summary?renderHub(h):renderPlaceholder(h)}
-document.getElementById('hubListBtn').onclick=()=>document.getElementById('drawer').classList.add('show');document.getElementById('drawerClose').onclick=()=>document.getElementById('drawer').classList.remove('show');document.getElementById('drawer').onclick=e=>{if(e.target.id==='drawer')document.getElementById('drawer').classList.remove('show')};
-render();
+function hrefFor(h,dir){if(!h)return '../index.html';if(dir==='prev'){return h.prev?`?hub=${h.prev}`:'../index.html'}if(dir==='next'){return h.next?`?hub=${h.next}`:(h.nextUrl||'../index.html')}return '#'}
+function labelFor(h,dir){if(dir==='prev')return h.prevLabel||'← 이전 허브';return h.nextLabel||'다음 허브 →'}
+function nodes(items){return (items||[]).map(i=>`<div class="node"><div class="ico">${esc(i.icon)}</div><b>${esc(i.title)}</b><small>${esc(i.text)}</small></div>`).join('')}
+function renderCards(title,items,cls='infoGrid'){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">${title}</h2><div class="${cls}">${items.map(x=>`<div class="info"><b>${esc(x.title||x[0])}</b><p>${esc(x.text||x[1]||'')}</p></div>`).join('')}</div></section>`}
+function renderList(title,items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">${title}</h2><div class="listFlow">${items.map(x=>`<div class="step">${esc(x)}</div>`).join('')}</div></section>`}
+function renderVerse(items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">대표성구</h2><div class="verseCard">${items.map(v=>`<div class="verse"><b>${esc(v.ref)}</b><p>${esc(v.text)}</p></div>`).join('')}</div></section>`}
+function renderPeople(items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">핵심인물</h2><div class="peopleGrid">${items.map(p=>`<div class="person"><span class="role">${esc(p.role)}</span><b>${esc(p.name)}</b><p>${esc(p.text)}</p></div>`).join('')}</div></section>`}
+function renderBible(items){if(!items||!items.length)return '';return `<section class="card"><h2 class="sectionTitle">관련성경</h2><div class="listFlow">${items.map(x=>`<div class="step">${esc(x)}</div>`).join('')}</div></section>`}
+function renderMessage(msg){if(!msg)return '';return `<section class="messageBox"><b>핵심메시지</b><p>${esc(msg)}</p></section>`}
+function renderTabs(){ $('tabs').innerHTML=HUBS.map(h=>`<a class="tab ${h.slug===slug?'active':''}" href="?hub=${h.slug}">${esc(h.title.replace(' 허브',''))}</a>`).join('') }
+function renderHubList(){ $('hubList').innerHTML=HUBS.map((h,i)=>`<a class="hubItem ${h.slug===slug?'active':''}" href="?hub=${h.slug}"><b>${i+1}. ${esc(h.title)}</b><span>${esc(h.year)} · ${esc(h.short)}</span></a>`).join('') }
+function renderHeader(h){$('kicker').textContent=h.kicker||h.order||'';$('title').textContent=h.heroTitle||h.title;$('subtitle').textContent=h.heroText||h.subtitle||'';$('tags').innerHTML=(h.tags||[]).map(t=>`<span>${esc(t)}</span>`).join('')}
+function renderHub(h){return `
+<section class="card"><h2 class="sectionTitle">한눈에 보기</h2><div class="summaryGrid">${(h.summary||[]).map(x=>`<div class="mini"><b>${esc(x[0])}</b><span>${esc(x[1])}</span></div>`).join('')}</div></section>
+<section class="card"><h2 class="sectionTitle">${esc(h.mainFlowTitle||'핵심 흐름')}</h2><div class="flow">${nodes(h.mainFlow||h.flow||[])}</div></section>
+<section class="card"><h2 class="sectionTitle">${esc(h.mapTitle||'허브지도')}</h2><div class="mapWrap"><img src="${esc(h.map)}" alt="${esc(h.mapTitle||'허브 지도')}"><div class="caption">${esc(h.mapCaption)}</div></div></section>
+${renderVerse(h.verse)}
+${renderList('핵심사건',h.events)}
+${renderPeople(h.people)}
+${renderCards('핵심의미',h.meaning)}
+${renderCards('연결탐험',h.connections)}
+${renderCards('통합탐험',h.integration)}
+${renderBible(h.bible)}
+${renderMessage(h.message)}
+${renderCards('핵심 요소',h.keyItems)}
+<section class="card"><h2 class="sectionTitle">전체 흐름 한눈에 보기</h2><div class="flow">${nodes(h.overviewFlow||[])}</div></section>
+<section class="card"><h2 class="sectionTitle">연대 흐름</h2><div class="timeline">${(h.timeline||[]).map(x=>`<div class="t ${x.active||x[2]?'active':''}"><strong>${esc(x.year||x[0])}</strong><span>${esc(x.label||x[1])}</span></div>`).join('')}</div></section>
+${h.note?`<div class="note">${esc(h.note)}</div>`:''}
+<div class="actions"><a class="action secondary" href="${hrefFor(h,'prev')}">${labelFor(h,'prev')}</a><a class="action primary" href="${hrefFor(h,'next')}">${labelFor(h,'next')}</a></div>`}
+function render(){const h=HUBS.find(x=>x.slug===slug)||HUBS[0];slug=h.slug;renderTabs();renderHeader(h);renderHubList();$('content').innerHTML=renderHub(h);$('prevBottom').href=hrefFor(h,'prev');$('prevBottom').textContent=labelFor(h,'prev');$('nextBottom').href=hrefFor(h,'next');$('nextBottom').textContent=labelFor(h,'next')}
+async function init(){const res=await fetch('data/hubs.json?v=return95-standard-v2');const data=await res.json();HUBS=data.hubs||[];slug=slug||data.defaultHub||(HUBS[0]&&HUBS[0].slug);render()}
+$('hubListBtn').onclick=()=>$('drawer').classList.add('show');$('hubBottom').onclick=()=>$('drawer').classList.add('show');$('drawerClose').onclick=()=>$('drawer').classList.remove('show');$('drawer').onclick=e=>{if(e.target.id==='drawer')$('drawer').classList.remove('show')};
 if('serviceWorker'in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}
+init();
 </script>
 </body>
 </html>
