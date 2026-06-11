@@ -29,8 +29,54 @@
 <div class="dot" data-title="성벽 허브" data-info="BC 445\n느헤미야가 예루살렘 성벽을 재건하고 공동체 질서를 바로 세웁니다." style="left:81.5%;top:136px" data-hub="hubs/index.html?hub=nehemiah"></div><div class="eventText hasHub" style="left:81.5%;top:152px">BC445<br>성벽 허브<br><span class="hubExploreBtn" data-hub-url="hubs/index.html?hub=nehemiah">허브탐험</span></div>
 </div></div>
 <section class="cen-enhance-panel"><div class="cen-layer-card"><div class="cen-layer-title">포로귀환 5허브 흐름</div><div class="cen-flow"><div class="cen-node"><b>귀환</b><span>고레스 칙령<br>회복의 시작</span></div><div class="cen-node"><b>성전</b><span>제2성전 완공<br>예배 회복</span></div><div class="cen-node"><b>에스더</b><span>부림절<br>섭리의 보존</span></div><div class="cen-node"><b>율법</b><span>에스라<br>말씀 회복</span></div><div class="cen-node dark"><b>성벽</b><span>느헤미야<br>공동체 완성</span></div></div></div><div class="cen-warning-strip">포로귀환 시대의 핵심은 단순한 귀향이 아닙니다. 성전, 말씀, 성벽을 통해 무너진 예배와 정체성과 공동체가 다시 세워지는 회복의 과정입니다.</div></section>
-</main><footer class="actions"><button class="action">성경연대기</button><button class="action">연결탐험</button><button class="action">한눈에 성경</button><button class="action">핵심 사건</button></footer>
+</main><footer class="actions"><button class="action">성경연대기</button><button class="action">연결탐험</button><button class="action">한눈에 성경</button><button class="action">허브</button></footer>
 <div class="modal" id="modal"><div class="card"><div class="cardTitle" id="modalTitle"></div><div class="cardBody" id="modalBody"></div><button class="close" id="closeModal">닫기</button></div></div>
 <script>(function(){document.addEventListener('click',function(e){const hub=e.target.closest('.dot[data-hub]');if(!hub)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();const url=hub.dataset.hub;if(url)window.open(url,'_self')},true)})();const tabs=[...document.querySelectorAll('.tab')];const views=[...document.querySelectorAll('.view')];tabs.forEach(tab=>{tab.onclick=()=>{const targetView=tab.dataset.view;if(targetView==='all'){const isAllActive=tab.classList.contains('active');tabs.forEach(t=>{if(isAllActive)t.classList.remove('active');else t.classList.add('active')})}else{tab.classList.toggle('active');const nonAllTabs=tabs.filter(t=>t.dataset.view!=='all');const allActive=nonAllTabs.every(t=>t.classList.contains('active'));const allTab=document.querySelector('.tab[data-view="all"]');if(allActive)allTab.classList.add('active');else allTab.classList.remove('active')}const activeViews=tabs.filter(t=>t.classList.contains('active')&&t.dataset.view!=='all').map(t=>t.dataset.view);views.forEach(v=>{const match=activeViews.some(cl=>v.classList.contains(cl));v.classList.toggle('hidden',!match)});updateStickyLabels()}});const modal=document.getElementById('modal');const mt=document.getElementById('modalTitle');const mb=document.getElementById('modalBody');document.querySelectorAll('[data-title]').forEach(el=>{el.onclick=()=>{mt.textContent=el.dataset.title;mb.textContent=el.dataset.info||'준비중입니다.';modal.classList.add('show')}});document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};const mainScroll=document.getElementById('mainScroll');function updateStickyLabels(){const scrollLeft=mainScroll.scrollLeft;document.querySelectorAll('.scroll-label').forEach(label=>{const bar=label.parentElement;if(!bar)return;const barLeft=bar.offsetLeft;const barWidth=bar.offsetWidth;const labelWidth=label.offsetWidth||80;let targetX=scrollLeft-barLeft+6;const maxX=barWidth-labelWidth-8;if(targetX<0)targetX=0;if(targetX>maxX)targetX=maxX;label.style.transform=`translateX(${targetX}px)`})}mainScroll.addEventListener('scroll',updateStickyLabels,{passive:true});window.addEventListener('resize',updateStickyLabels);setTimeout(updateStickyLabels,100);if('serviceWorker'in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{})}</script>
-<script>(function(){const footerLinks={'성경연대기':'https://centiger.github.io/cen-bible-chrololgy/?view=timeline','연결탐험':'https://centiger.github.io/cen-bible-chrololgy/#hub','한눈에 성경':'https://centiger.github.io/CEN-Bible2.0/#overview66','핵심 사건':'https://centiger.github.io/cen-bible-chrololgy/?view=timeline'};document.addEventListener('click',function(e){const btn=e.target.closest('footer.actions .action');if(!btn)return;const label=(btn.textContent||'').trim();const url=footerLinks[label];if(!url)return;e.preventDefault();e.stopPropagation();window.open(url,'_self')},true)})();(function(){document.addEventListener('click',function(e){const btn=e.target.closest('.hubExploreBtn[data-hub-url]');if(!btn)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();window.open(btn.dataset.hubUrl,'_self')},true)})();</script>
+<script>(function(){const footerLinks={'성경연대기':'https://centiger.github.io/cen-bible-chrololgy/?view=timeline','연결탐험':'https://centiger.github.io/cen-bible-chrololgy/#hub','한눈에 성경':'https://centiger.github.io/CEN-Bible2.0/#overview66','허브':'https://centiger.github.io/cen-bible-chrololgy/?view=timeline'};document.addEventListener('click',function(e){const btn=e.target.closest('footer.actions .action');if(!btn)return;const label=(btn.textContent||'').trim();const url=footerLinks[label];if(!url)return;e.preventDefault();e.stopPropagation();window.open(url,'_self')},true)})();(function(){document.addEventListener('click',function(e){const btn=e.target.closest('.hubExploreBtn[data-hub-url]');if(!btn)return;e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();window.open(btn.dataset.hubUrl,'_self')},true)})();</script>
+
+<div class="hub-drawer" id="hubDrawer" aria-hidden="true">
+  <div class="hub-drawer-panel">
+    <div class="hub-drawer-head">
+      <strong>포로귀환 허브 목록</strong>
+      <button type="button" id="hubDrawerClose">닫기</button>
+    </div>
+    <div class="hub-drawer-list">
+      <a href="hubs/?hub=return"><b>1. 귀환 허브</b><span>약속된 회복</span></a>
+      <a href="hubs/?hub=temple"><b>2. 성전 허브</b><span>예배 회복</span></a>
+      <a href="hubs/?hub=esther"><b>3. 에스더와 부림절 허브</b><span>섭리의 보존</span></a>
+      <a href="hubs/?hub=law"><b>4. 율법 허브</b><span>말씀 회복</span></a>
+      <a href="hubs/?hub=wall"><b>5. 성벽 허브</b><span>공동체 회복</span></a>
+    </div>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  function openReturnHubDrawer(){
+    var d=document.getElementById('hubDrawer');
+    if(d){ d.classList.add('show'); d.setAttribute('aria-hidden','false'); }
+  }
+  function closeReturnHubDrawer(){
+    var d=document.getElementById('hubDrawer');
+    if(d){ d.classList.remove('show'); d.setAttribute('aria-hidden','true'); }
+  }
+  document.addEventListener('click', function(e){
+    var txt=(e.target && e.target.textContent || '').trim();
+    var btn=e.target.closest && e.target.closest('button,a');
+    if(!btn) return;
+    var btxt=(btn.textContent||'').trim();
+    if(btxt === '허브' || btxt === '허브목록'){
+      e.preventDefault();
+      openReturnHubDrawer();
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(e.target && e.target.id === 'hubDrawer') closeReturnHubDrawer();
+    if(e.target && e.target.id === 'hubDrawerClose') closeReturnHubDrawer();
+  });
+  window.openReturnHubDrawer=openReturnHubDrawer;
+})();
+</script>
+
 </body></html>
